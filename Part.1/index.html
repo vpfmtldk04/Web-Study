@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <title>Document</title>
+  <style>
+    body{
+      font-size: 50px;
+    }
+    .red {
+      color: red;
+    }
+
+    #abc {
+      color: blue;
+    }
+    div {
+      color: red;
+      background-color: black;
+    }
+
+    td {
+      border: 1px solid red;
+      padding: 10px;
+    }
+  </style>  
+  <script defer>
+    const els = document.querySelectorAll('div')
+    els.forEach(el => {
+      console.log(el.dataset.fruitName)
+    })
+  </script>
+</head>
+<body>
+  <div>
+    <h1>오늘의 날씨</h1>
+    <h2>오늘의 날씨</h2>
+    <h3>오늘의 날씨</h3>
+  </div>
+
+    <br>
+
+    <img src="https://image.ytn.co.kr/general/jpg/2020/0916/202009161118408300_t.jpg" alt="태풍">
+    <img src="https://image.ytn.co.kr/general/jpg/2020/0916/202009161118408300_t.jp" alt="태풍">
+
+    <br>
+
+    <ul>
+      <li>사과</li>
+      <li>딸기</li>
+      <li>수박</li>
+      <li>오렌지</li>
+    </ul>
+
+    <br>
+
+    <ol>
+      <li>사과</li>
+      <li>딸기</li>
+      <li>수박</li>
+      <li>오렌지</li>
+    </ol>
+
+    <br>
+
+    <a href="https://naver.com" target="_blank" title="네이버로 이동">NAVER</a>
+    <a href="https://google.com">GOOGLE</a>
+
+    <br>
+
+    <!-- 애국가 -->
+
+    <p>
+      <span id="abc">동해물과</span> <span class="red">백두산</span>이 마르고 닳도록 <br>
+      하느님이 보우하사 <span class="red">우리나라</span> 만세
+    </p>
+
+    <br>
+
+    <p>
+      동해물과 백두산이 마르고 닳도록 <br>
+      하느님이 보우하사 <div>우리나라</div> 만세
+    </p>
+
+    <br>
+
+    <input type="text" value="heropy" placeholder="이름을 입력하세요!" disabled>
+    <input type="text" value="heropy" placeholder="이름을 입력하세요!">
+
+    <br>
+
+    <label>
+      <input type="checkbox"> Apple
+    </label>
+    <label>
+      <input type="checkbox"> banana
+    </label>
+
+    <label>
+      <input type="radio" name="fruits"> Apple
+    </label>
+    <label>
+      <input type="radio" name="fruits"> banana
+    </label>
+    
+    <br>
+
+    <input type="checkbox" checked>
+    
+    <br>
+
+    <table>
+      <tr>
+        <td>A</td>
+        <td>B</td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td>D</td>
+      </tr>
+    </table>
+
+    <div data-fruit-name="apple">사과</div>
+    <div data-fruit-name="banana">바나나</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+-기본-
+
+* 전체 선택자 : 모든 요소를 선택
+ABC 태그선택자 : 태그 이름이 ABC인 요소 선택
+.ABC 클래스 선택자 : HTML Class 속성의 값이 ABC인 요소 선택
+#ABC 아이디 선택자 :HTML ID속성의 값이 ABC인 요소 선택
+
+-복합-
+
+ABCXYZ 일치 선택자 : 선택자 ABC와 XYZ를 동시에 만족하는 요소 선택 
+  주의해야 할점 : 만약 태그선택자가 있다면 반드시 태그선택자를 맨앞에 작성해야함
+ABC > XYZ 자식 선택자 : 선택자 ABC의 자식요소 XYZ를 선택
+ABC XYZ 하위(자손)선택자 : 선택자 ABC의 하위 요소 XYZ를 선택, '뛰어쓰기'가 선택자의 기호
+ABC + XYZ 인접 형제 선택자 : 선택자 ABC의 다음 형제 요소 XYZ 하나를 선택
+ABC ~ XYZ 일반 형제 선택자 : 선택자 ABC의 다음 형제 요소 XYZ 모두를 선택
+
+- 가상 클래스 -
+
+* 가상 클래스는 클론(:)을 사용함! *
+
+ABC:hover 선택자 ABC 요소에 마우스 커서가 올라가 있는 동안 선택
+ABC:active 선택자 ABC 요소에 마우스를 클릭하고 있는 동안 선택
+ABC:focus 선택자 ABC 요소가 포커스되면 선택 (HTML 대화형 콘텐츠 해당) ex ) input, a, button, label, select 등
+  대화형 콘텐츠로 변경 방법  : tabindex 속성 추가 값 -1
+ABC:first-child 선택자 ABC가 형제 요소중 첫째라면 선택
+ABC:last-child 선택자 ABC가 형제 요소중 막내라면 선택 
+
+ABC:nth-child(n) 선택자 ABC가 형제 요소중 (n)째라면 선택, 숫자는 계산식도 가능하다 ex ) 2n = 둘째와 넷째 (n은 0부터), n+2 = 둘째 이후
+ABC:not(XYZ) 부정선택자, 선택자 XYZ가 아닌 ABC요소 선택
+
+-가상 요소 -
+* 가상 클래스는 클론2개(::)를 사용함! *
+
+ABC::before 선택자 ABC 요소의 내부 앞에 내용 (Content)을 삽입
+ABC::after 선택자 ABC 요소의 내부 뒤에 내용 (Content)을 삽입
+content 필수!
+
+-속성-
+[ABC] 속성 ABC을 포함한 요소 선택
+[ABC = "XYZ"] 속성 ABC을 포함하고 값이 XYZ인 요소 선택
+
+-우선순위-
+
+!important > style(inline) > ID > Class(가상 클래스 포함) > 테그(요소 선택자 포함) > 전체 
+부정 선택자와 상속은 제외, 우선순위가 같을 경우 젤 마지막 선언된 코드가 실행

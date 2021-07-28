@@ -1,0 +1,409 @@
+body {
+  padding: 100px;
+}
+
+.div {
+  width: auto;
+  height: auto;
+  /* 요소의 가로 / 세로 너비 
+  auto : 브라우저가 너비를 계산 (기본값 (요소에 이미 들어있는 속성 값))
+  단위 : px, em, vw 등 단위로 지정 */
+  background-color: orange;
+}
+
+.span {
+  width: auto;
+  height: auto;
+  background-color: orange;
+}
+
+.parent {
+  width: 300px;
+  height: 200px;
+  background-color: royalblue;
+}
+
+.child {
+  /* max-width: 300px; */
+  min-width: 400px;
+  height: 100px;
+  /* height: 50%; 부모 상대적*/
+  /* height: 20em; 글꼴 크기 상대적*/
+  /* height: 20rem; html 글꼴 크기 상대적*/
+  /* height: 20vw; 뷰포트 크기 상대적*/
+  background-color: orange;
+}
+
+.container .item {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  /* margin: 20px; 요소의 외부 여백(공간)을 지정하는 단축 속성, 음수 사용 가능
+  auto 브라우저가 여백을 계산가로(세로) 너비가 았는 요소의 가운데 정렬에 활용
+  0 외부 여백 없음
+  단위 px, em, vw 등 단위로 지정 */
+  margin-bottom: 20px;
+}
+
+/* padding: 20px; 요소의 내부 여백(공간)을 지정하는 단축 속성 , 요소 크기 커짐
+0 네부 여백 없음
+위 px, em, vw 등 단위로 지정 
+margin, padding 값 1개 : 상하좌우, 2개 : 상하, 좌우, 3개 : 상, 좌우, 하 4개 : 상, 우, 하, 좌*/
+
+.container .item:first-child {
+  /* padding: 20px; */
+  /* border: 10px solid red; */
+  border: 4px dashed red;
+}
+
+/*border: 
+border-width(선-두께) 단위 : px, em, %등 단위로 지정, 단축 속성
+border-style(선-종류) : none 선 없음, solid 실선, dashed 파선, 단축속성
+border-color(선-색상) black 검정색, 색상 선의 색상, trandsparent 투명, 단축속성; 
+값 1개 : 상하좌우, 2개 : 상하, 좌우, 3개 : 상, 좌우, 하 4개 : 상, 우, 하, 좌
+요소의 크기가 커진다
+방향도 추가 가능
+border-radius : 모서리 둥글게 0 둥글게 없음, 단위 px, em, vw 등 단위로 지정 */
+
+.radius {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.boxsizing1 {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  border: 4px solid red;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.boxsizing2 {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+/*box-sizing : 요소의 크기 걔산 기준을 지정 content-box 요소의 내용으로 크기 계산, border-box 요소의 내용 + padding + border로 크기 계산*/
+
+.ofpar {
+  width: 200px;
+  height: 150px;
+  background-color: royalblue;
+  margin: 20px;
+  padding: 20px;
+  /* overflow: hidden; */
+  overflow: scroll;
+  overflow: auto;
+}
+
+.ofchi {
+  width: 300px;
+  height: 100px;
+  background-color: orange;
+}
+
+/* overflow : 요소의 크기 이상으로 내용이 넘쳤을때 보여짐을 제어하는 단축 속상
+visible 넘친 내용을 그대로 보여줌
+hidden 넘친 내용을 잘라냄
+auto 넘친 내용이 있는 경우에만 잘라내고 스크롤바 생성 */
+
+.display {
+  display: block;
+  width: 120px;
+  height: 30px;
+  background-color: royalblue;
+  color: white;
+}
+
+/* display : 요소의 화면 출력(보여짐 특성) 
+block 상자(레이아웃)요소 inline 글자 요소 inline-block 글자 + 상자 요소 
+flex 플렉스 박스(1차원) grid 그리드(2차원) none 보여짐 특성 없음, 화면에서 사라짐
+기타 table, table-row, table-cell 등 */
+
+.oppar {
+  width: 100px;
+  height: 100px;
+  padding: 30px;
+  background-color: royalblue;
+}
+
+.opchi {
+  width: 200px;
+  height: 100px;
+  background-color: orange;
+  opacity: .5;
+  /*소수점 0 생략 가능*/
+}
+
+/* opaciry 1 불투명 0~1 0부터 1 사이의 소수점 숫자 */
+
+h1 {
+  font-size: 24px;
+  /* 16px 기본크기, 단위 px, em, rem 등 단위로 지정  */
+  font-weight: 700;
+  /* normal, 400 기본두께 bold 두껍게 100~900 100단위의 숫자 9개 normal과 bold 이외의 두께 */
+  font-style: italic;
+  /* normal 기울기 없음 italic 이텔릭체 */
+  font-family: serif;
+  /* font-family: 글꼴1, "글꼴2"(띄어쓰기등 특수문자 글꼴 이름 해당), ... 글꼴계열; 
+  serif, sans-selif, mononspace, cursive, fantasy*/
+}
+
+p {
+  width: 350px;
+  padding: 10px;
+  border: 1px solid;
+  box-sizing: border-box;
+  line-height: 1.4;
+  /* 한줄의 높이, 행간과 유사
+  숫자 요소의 글꼴 크기의 배수로 지정, 단위 px, em, rem 등의 단위로 지정 */
+}
+
+
+a {
+  display: block;
+  width: 200px;
+  height: 100px;
+  background-color: orange;
+  font-size: 22px;
+  color: white;
+  /* rgb(0, 0, 0) 검정색, 색상 기타 지정 가능한 색상 */
+  text-decoration: none;
+  /* none 장식없음, underline 밑줄, line-through 중앙선 */
+  text-align: center;
+  /* left 왼쪽정렬, right 오른쪽 정렬, center 가운데 졍렬 */
+  line-height: 100px;
+}
+
+.text {
+  font-size: 24px;
+  text-indent: 50px;
+  /* 음수 내어쓰기, 0 들여쓰기 없음, 단위 px, em, rem 등 단위로 지정 */
+}
+
+.background {
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+  /* transparent 투명함, 색상 지정 가능한 색상 */
+  background-image: url("https://upload.wikimedia.org/wikipedia/ko/4/4a/%EC%8B%A0%EC%A7%B1%EA%B5%AC.png");
+  /* none 이미지 없음 url("경로") 이미지 경로 */
+  background-size: cover;
+  /* auto 이미지의 실제 크기, 단위 px, em, rem 등 단위로 지정
+  cover 비율을 유지, 요서의 더 넓은 너비에 맞춤, contain 비율을 유지, 요소의 더 짧은 너비에 맞춤*/
+  background-repeat: no-repeat;
+  /* repeat 이미지를 수직, 수평 반복 repeat-x 이미지를 수평 반복, 
+  repeat-y 이미지 수직 반복, no-repeat 반복 없음*/
+  background-position: center;
+  /* 방향 top, bottom, left, right, center 방향
+  단위 px, em, rem 등 단위로 지정 */
+  background-attachment: scroll;
+  /* background-attachment
+  scroll 이미지가 요소를 따라서 같이 스크롤, fixed 이미지가 뷰포트에 고정, 스크롤 X */
+}
+
+.warp {
+  width: 400px;
+  height: 300px;
+  background-color: tomato;
+}
+
+.dpcon {
+  width: 300px;
+  background-color: royalblue;
+  position: relative;
+}
+
+/* .dpcon .dpitem {
+  border: 4px dashed red;
+  background-color: orange;
+} */
+
+.dpcon .dpitem {
+  width: 100px;
+  height: 100px;
+  border: 4px dashed red;
+  background-color: orange;
+}
+
+/* .dpcon .dpitem:nth-child(1) {
+  width: 100px;
+  height: 100px;
+} */
+
+.dpcon .dpitem:nth-child(1) {
+  position: relative;
+  z-index: 1;
+}
+
+/* .dpcon .dpitem:nth-child(2) {
+  width: 140px;
+  height: 70px;
+  position: fixed;
+  bottom: 30px;
+  right: 60px;
+} */
+
+.dpcon .dpitem:nth-child(2) {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+/* .dpcon .dpitem:nth-child(3) {
+  width: 70px; 
+  height: 120px;
+} */
+
+.dpcon .dpitem:nth-child(3) {
+  position: fixed;
+  z-index: 1;
+}
+
+/* position 요소의 위치 지정 기준
+static 기준 없음, relative 요소 자신을 기준, absolute 위치상 부모 요소를 기준,
+fixed 뷰포트 (브라우저)를 기준 */
+
+/* top, bottom, left, right 요소의 각 방향별 거리 지정 
+auto 브라우저가 계산, 단위 px, em, rem 등 단위로 지정*/
+
+/* z-index 요소의 쌓임 정도를 지정 
+auto(=0) 부모 요소와 동일한 쌓임 정도, 숫자 숫자가 높을 수록 위에 쌓임*/
+
+/* position 속성의 값으로 absolute, fixed로 지정된 요소는
+display 속성이 block으로 변경됨 */
+
+.flexC {
+  width: 500px;
+  height: 300px;
+  /* height: 200px; */
+  background-color: royalblue;
+  display: flex;
+  /* display Flex Container의 화면 출력 특성
+  flex 블록 요소와 같이 Flex Container 정의
+  inline-flex 인라인 요소와 같이 Flex Container 정의 */
+  justify-content: center;
+  /* justify-content
+  flex-start Flex Items를 시작점으로 정렬
+  flex-end Flex Items 끝점으로 정렬
+  center Flex Items를 가운데로 정렬 */
+  align-items: center;
+  /* align-items 교차 축의 한줄 정렬 방법 
+  stretch Flex Item를 시작점으로 정렬
+  flex-start Flex Item를 시작점으로 정렬
+  flex-end Flex Items 끝점으로 정렬
+  center Flex Items를 가운데로 정렬*/
+}
+
+.flexC .flexI {
+  width: 100px;
+  height: 100px;
+  border: 3px dashed red;
+  background-color: orange;
+  flex-grow: 1;
+  /* flex-grow FlexItems의 증가 너비 비율
+  0 증가 비율 없음
+  숫자 증가 비율 */
+  flex-basis: 0;
+  /* 공간 배분전 기본 너비
+  auto 요소의 content 너비  단위 px, em, rem 등 단위로 지정*/
+}
+
+.flexC .flexI:nth-child(3) {
+  flex-grow: 2;
+}
+
+/* flex-direction 주 축 설정
+row 행 축 (좌=>우) row-reverse 행 축 (우=>좌) */
+
+/* flex-wrap Flex Item 묶음(줄바꿈) 여부 
+nowrap 묶음 (줄바꿈)없음
+wrap 여러줄로 묶음*/
+
+/* align-content 교차 축의 여러줄 정렬 방법 
+stretch Flex Item를 시작점으로 정렬
+flex-start Flex Item를 시작점으로 정렬
+flex-end Flex Items 끝점으로 정렬
+center Flex Items를 가운데로 정렬*/
+
+/* order FlexItems의 순서
+0 순서 없음
+숫자 숫자가 작을수록 먼저 */
+
+/* flex-shrink FlexItems 감소 너비 비율
+1 Flex Container 너비에 따라 감소 비율
+숫자 감소 비율 */
+
+.tran {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  transition: 1s .5s;
+  /*요소의 전환 효과를 지정하는 단축속성
+  transition: 속성명 지속시간(단축형시 필수) 타이밍함수 대기시간
+  property 전환 효과를 사용할 속성 이름 지정
+  all 모든 속성에 적용, 속성이름 전환 효과를 사용할 속성 이름 명시
+
+  duration 지속시간
+  0s 전환 효과 없음, 시간 지속시간(s)을 지정
+
+  timing-function: 타이밍 함수 지정
+  ease 느-빠-느
+  linear 일정
+  ease-in 느-빠
+  ease-out 빠-느
+  ease-in-out 느-빠-느
+  
+  delay 대기시간 지정
+  0s 대기시간 없음
+  시간 대기시간(s) 지정*/
+}
+
+.tran:hover {
+  width: 300px;
+  background-color: royalblue;
+}
+
+.conC {
+  width: 100px;
+  height: 100px;
+  background-color: royalblue;
+  perspective: 250px;
+}
+
+.conC .conI{
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  font-size: 60px;
+  /* transform: perspective(300px) rotateX(45deg) translateX(100px); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+/* 2D 변환 함수
+translate(x, y) 이동 x축 y축
+translateX(x) 이동 x축
+translateY(y) 이동 y축
+scale(x, y) 크기 x축, y축
+ratate(degree) 회전 (각도)
+skewX(x) 기울임 x축
+skewY(y) 기울임 y축
+
+3d 변환 함수
+perspective(n) 원근법 (거리) 맨 앞에 작성
+perspective (속성) 하위 요소를 관찰하는 원근 거리를 지정 단위 px 등 단위로 지정
+관찰대상이 다름!
+ratateX(x) 회전 (x축)
+ratateY(y) 회전 (y축)
+backface-visibility 회전된 요소의 뒷면 숨기 여부
+visible 뒷면 보임 hidden 뒷면 숨김
+*/
