@@ -1,0 +1,13 @@
+dash-case(kebab-case) html, css 자주 이용
+the-quick-brown-fox-jumps-over-the-lasy-dog
+
+snake_case html, css 자주 사용
+the_quick_brown_fox_jumps_over_the_lasy_dog
+
+camelCase js 자주 사용
+theQuickBrownFoxJumpsOverTheLazyDog
+
+PascalCase js 자주 사용
+TheQuickBrownFoxJumpsOverTheLazyDog
+
+zero-based Numbering 0 기반 번호 매기기 특수한 경우를 제외하고 0부터 숫자를 시작한다
